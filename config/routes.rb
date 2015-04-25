@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
 
   resources :users
-  root to 'users#new'
+  root to: 'users#new'
 end
