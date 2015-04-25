@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
 	private
 	def prep_email
-		self.email = self.email.strip.downcase if self_email
+		self.email = self.email.strip.downcase if self.email
 	end
 
 
