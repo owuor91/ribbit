@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 	before_save :create_avatar_url
 	before_validation :prep_email
 	has_secure_password
+	has_many :ribbits
 	validates :name, presence: true 
 	validates :username, uniqueness: true, presence: true
 	validates :email, uniqueness: true, presence: true, format: { with: /\A[\w.+-]+@([\w]+.)+\w+\z/ }
